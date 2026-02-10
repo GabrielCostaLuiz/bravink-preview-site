@@ -3,7 +3,7 @@ import { IMAGES } from '../constants';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[89vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-[89vh] flex items-center pt-32 max-md:pb-10 md:pt-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={IMAGES.HERO_BG}

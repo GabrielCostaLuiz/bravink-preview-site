@@ -56,7 +56,7 @@ const Simulator: React.FC = () => {
   };
 
   return (
-    <section id="simulador" className="py-24 bg-surface-light dark:bg-slate-950 overflow-hidden transition-colors duration-300">
+    <section id="simulador" className="pt-24 bg-surface-light dark:bg-slate-950 overflow-hidden transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Reveal width="100%">
@@ -75,72 +75,66 @@ const Simulator: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <Reveal width="100%" delay={200}>
             <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-float dark:shadow-none border border-border-light dark:border-slate-800 overflow-hidden transition-colors duration-300">
-              
+
               {/* Mobile Selection (Select Input) */}
               <div className="md:hidden p-6 border-b border-border-light dark:border-slate-800 bg-slate-50 dark:bg-slate-900">
-                  <label htmlFor="simulator-type" className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">
-                      Selecione o tipo de consórcio
-                  </label>
-                  <div className="relative">
-                      <select
-                          id="simulator-type"
-                          value={activeTab}
-                          onChange={(e) => setActiveTab(e.target.value as SimulatorType)}
-                          className="w-full appearance-none bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary dark:text-white font-bold text-lg py-4 pl-6 pr-12 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent shadow-sm"
-                      >
-                          <option value="imoveis">Imóveis</option>
-                          <option value="veiculos">Veículos</option>
-                          <option value="pesados">Pesados</option>
-                          <option value="servicos">Serviços/Energia</option>
-                      </select>
-                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary dark:text-white">
-                          <span className="material-symbols-outlined">expand_more</span>
-                      </div>
-                  </div>
+                <label htmlFor="simulator-type" className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">
+                  Selecione o tipo de consórcio
+                </label>
+                <div className="relative">
+                  <select
+                    id="simulator-type"
+                    value={activeTab}
+                    onChange={(e) => setActiveTab(e.target.value as SimulatorType)}
+                    className="w-full appearance-none bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary dark:text-white font-bold text-lg py-4 pl-6 pr-12 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent shadow-sm"
+                  >
+                    <option value="imoveis">Imóveis</option>
+                    <option value="veiculos">Veículos</option>
+                    <option value="pesados">Pesados</option>
+                    <option value="servicos">Serviços/Energia</option>
+                  </select>
+
+                </div>
               </div>
 
               {/* Desktop Tabs */}
               <div className="hidden md:flex border-b border-border-light dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900">
                 <button
                   onClick={() => setActiveTab('imoveis')}
-                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${
-                    activeTab === 'imoveis'
-                      ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
-                      : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
-                  }`}
+                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${activeTab === 'imoveis'
+                    ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
+                    : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
+                    }`}
                 >
                   <span className={`material-symbols-outlined ${activeTab === 'imoveis' ? 'text-accent' : ''}`}>home</span>
                   <span className="whitespace-nowrap text-sm uppercase tracking-wider">Imóveis</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('veiculos')}
-                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${
-                    activeTab === 'veiculos'
-                      ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
-                      : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
-                  }`}
+                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${activeTab === 'veiculos'
+                    ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
+                    : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
+                    }`}
                 >
                   <span className={`material-symbols-outlined ${activeTab === 'veiculos' ? 'text-accent' : ''}`}>directions_car</span>
                   <span className="whitespace-nowrap text-sm uppercase tracking-wider">Veículos</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('pesados')}
-                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${
-                    activeTab === 'pesados'
-                      ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
-                      : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
-                  }`}
+                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${activeTab === 'pesados'
+                    ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
+                    : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
+                    }`}
                 >
                   <span className={`material-symbols-outlined ${activeTab === 'pesados' ? 'text-accent' : ''}`}>local_shipping</span>
                   <span className="whitespace-nowrap text-sm uppercase tracking-wider">Pesados</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('servicos')}
-                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${
-                    activeTab === 'servicos'
-                      ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
-                      : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
-                  }`}
+                  className={`flex-1 py-6 px-4 flex items-center justify-center gap-3 border-b-2 transition-all ${activeTab === 'servicos'
+                    ? 'border-accent bg-white dark:bg-slate-800 font-bold text-primary dark:text-white'
+                    : 'border-transparent hover:bg-white/50 dark:hover:bg-slate-800/50 text-text-light dark:text-slate-400 font-semibold'
+                    }`}
                 >
                   <span className={`material-symbols-outlined ${activeTab === 'servicos' ? 'text-accent' : ''}`}>bolt</span>
                   <span className="whitespace-nowrap text-sm uppercase tracking-wider">Serviços/Energia</span>
@@ -150,7 +144,7 @@ const Simulator: React.FC = () => {
               <div className="grid lg:grid-cols-12 gap-0">
                 {/* Controls */}
                 <div className="lg:col-span-7 p-8 lg:p-14 space-y-12">
-                  
+
                   {/* Value Slider */}
                   <div className="space-y-6">
                     <div className="flex flex-col gap-4">
