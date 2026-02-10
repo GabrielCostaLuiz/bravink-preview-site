@@ -9,10 +9,10 @@ interface RevealProps {
   overflowHidden?: boolean;
 }
 
-const Reveal: React.FC<RevealProps> = ({ 
-  children, 
-  width = 'fit-content', 
-  delay = 0, 
+const Reveal: React.FC<RevealProps> = ({
+  children,
+  width = 'fit-content',
+  delay = 0,
   direction = 'up',
   className = '',
   overflowHidden = true
@@ -61,16 +61,15 @@ const Reveal: React.FC<RevealProps> = ({
     <div
       ref={ref}
       className={`${className}`}
-      style={{ 
-        position: 'relative', 
-        width, 
+      style={{
+        position: 'relative',
+        width,
         overflow: overflowHidden ? 'hidden' : 'visible'
       }}
     >
       <div
-        className={`transition-all duration-1000 ease-out ${
-          isVisible ? 'opacity-100 translate-y-0 translate-x-0' : `opacity-0 ${getDirectionClass()}`
-        }`}
+        className={`transition-all duration-1000 ease-out ${className.includes('h-') ? 'h-full' : ''} ${width === '100%' ? 'w-full' : ''} ${isVisible ? 'opacity-100 translate-y-0 translate-x-0' : `opacity-0 ${getDirectionClass()}`
+          }`}
         style={{ transitionDelay: `${delay}ms` }}
       >
         {children}
