@@ -24,7 +24,7 @@ const Stats: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
           {stats.map((stat, idx) => (
             <div key={idx} className="p-4">
-              <Reveal delay={idx * 100} width="100%">
+              <Reveal delay={idx * 100} width="100%" className="h-full">
                 <p className="text-4xl md:text-5xl font-display font-bold text-white mb-2">{stat.value}</p>
                 <p className="text-xs text-accent font-bold uppercase tracking-[0.2em]">{stat.label}</p>
               </Reveal>

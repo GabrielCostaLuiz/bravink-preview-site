@@ -21,7 +21,7 @@ const FeaturedPlans: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Plan A */}
-          <Reveal delay={200} width="100%">
+          <Reveal delay={200} width="100%" className="h-full">
             <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-border-light dark:border-slate-800 shadow-float dark:shadow-none hover:shadow-2xl hover:border-accent hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group h-full">
               <div className="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-4 py-2 rounded-bl-xl z-10 shadow-lg">
                 MAIS VENDIDO
@@ -35,15 +35,15 @@ const FeaturedPlans: React.FC = () => {
                   <p className="text-sm text-slate-500 dark:text-slate-400">Crédito de R$ 300.000,00</p>
                 </div>
               </div>
-              
+
               <div className="py-6 border-y border-slate-100 dark:border-slate-800 mb-6 space-y-4">
                 <div className="flex justify-between items-center">
-                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Parcelas a partir de</span>
-                   <span className="text-2xl font-bold text-primary dark:text-white">R$ 1.950<span className="text-sm text-slate-400 font-normal">,00</span></span>
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Parcelas a partir de</span>
+                  <span className="text-2xl font-bold text-primary dark:text-white">R$ 1.950<span className="text-sm text-slate-400 font-normal">,00</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Prazo sugerido</span>
-                   <span className="text-sm font-bold text-primary dark:text-white">180 meses</span>
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Prazo sugerido</span>
+                  <span className="text-sm font-bold text-primary dark:text-white">180 meses</span>
                 </div>
               </div>
 
@@ -54,9 +54,9 @@ const FeaturedPlans: React.FC = () => {
           </Reveal>
 
           {/* Plan B */}
-          <Reveal delay={400} width="100%">
+          <Reveal delay={400} width="100%" className="h-full">
             <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-border-light dark:border-slate-800 shadow-float dark:shadow-none hover:shadow-2xl hover:border-accent hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group h-full">
-               <div className="absolute top-0 right-0 bg-primary dark:bg-slate-700 text-white text-xs font-bold px-4 py-2 rounded-bl-xl z-10 shadow-lg">
+              <div className="absolute top-0 right-0 bg-primary dark:bg-slate-700 text-white text-xs font-bold px-4 py-2 rounded-bl-xl z-10 shadow-lg">
                 AUTO
               </div>
               <div className="flex items-center gap-4 mb-6">
@@ -68,15 +68,15 @@ const FeaturedPlans: React.FC = () => {
                   <p className="text-sm text-slate-500 dark:text-slate-400">Crédito de R$ 60.000,00</p>
                 </div>
               </div>
-              
+
               <div className="py-6 border-y border-slate-100 dark:border-slate-800 mb-6 space-y-4">
                 <div className="flex justify-between items-center">
-                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Parcelas a partir de</span>
-                   <span className="text-2xl font-bold text-primary dark:text-white">R$ 890<span className="text-sm text-slate-400 font-normal">,00</span></span>
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Parcelas a partir de</span>
+                  <span className="text-2xl font-bold text-primary dark:text-white">R$ 890<span className="text-sm text-slate-400 font-normal">,00</span></span>
                 </div>
                 <div className="flex justify-between items-center">
-                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Prazo sugerido</span>
-                   <span className="text-sm font-bold text-primary dark:text-white">80 meses</span>
+                  <span className="text-sm font-medium text-slate-500 dark:text-slate-400">Prazo sugerido</span>
+                  <span className="text-sm font-bold text-primary dark:text-white">80 meses</span>
                 </div>
               </div>
 

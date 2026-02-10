@@ -37,10 +37,10 @@ const Testimonials: React.FC = () => {
             </h2>
           </Reveal>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((item, idx) => (
-            <Reveal key={idx} delay={idx * 150} width="100%">
+            <Reveal key={idx} delay={idx * 150} width="100%" className="h-full">
               <div className="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-default h-full">
                 <div className="flex text-accent mb-4">
                   {[...Array(item.rating)].map((_, i) => (

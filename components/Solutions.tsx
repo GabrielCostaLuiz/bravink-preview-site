@@ -70,7 +70,7 @@ const Solutions: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-10">
           {solutions.map((item, idx) => (
-            <Reveal key={idx} delay={idx * 200} width="100%">
+            <Reveal key={idx} delay={idx * 200} width="100%" className="h-full">
               <SolutionCard {...item} />
             </Reveal>
           ))}

@@ -52,7 +52,7 @@ const Features: React.FC = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {features.map((feature, idx) => (
-            <Reveal key={idx} delay={idx * 150} width="100%">
+            <Reveal key={idx} delay={idx * 150} width="100%" className="h-full">
               <div
                 className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-accent/30 group h-full"
               >
